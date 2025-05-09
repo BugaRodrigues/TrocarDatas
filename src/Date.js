@@ -4,16 +4,22 @@ class Get_Date
     {
         this.value = value;
     }
+
+    #Get_Data()
+    {
+        return this.value.match(/\d{2,4}\D\d{1,2}\D\d{1,2}/)
+    }
+
     Get_Day()
     {
-        return /\d*$/.exec(this.value);
-    }
+        return /\d*$/.exec(this.#Get_Data());
+    }   
     Get_Month()
     {
-        return /\d*(?=\D(?=\d*$))/.exec(this.value);
+        return /\d*(?=\D(?=\d*$))/.exec(this.#Get_Data());
     }
     Get_Year()
     {
-        return  /^\d*/.exec(this.value);
+        return  /^\d*/.exec(this.#Get_Data());
     }
 }

@@ -15,10 +15,11 @@ body
     margin-left: 1%;
 }
 
-input[type="date"]
+input[type="text"]
 {
     background-color: blue;
     font-size: 1.8em;
+    text-align: center;
     color: aliceblue;
     padding: 15px;
     outline: none;
